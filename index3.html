@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhap so năm sinh<input id="year" type="number">
+<button id="tinh()" onclick="nhan()">hienthi</button>
+<p id="xuathien">ketqua:</p>
+<script>
+    let can = ''
+    let chi = ''
+    function nhan() {
+        let year = +document.getElementById('year').value;
+        switch (year % 10) {
+            case 0:
+                can = 'Canh';
+                break;
+            case 1:
+                can = 'Tân';
+                break;
+            case 2:
+                can = 'Nham';
+                break;
+            case 3:
+                can = 'Quy';
+                break;
+            case 4:
+                can = 'Giap';
+                break;
+            case 5:
+                can = 'At';
+                break;
+            case 6:
+                can = 'Binh';
+                break;
+            case 7:
+                can = 'Dinh';
+                break;
+            case 8:
+                can = 'Mau';
+                break;
+            case 9:
+                can = 'Ky';
+                break;
+        }
+        switch (year % 12) {
+            case 0:
+                chi = 'Than';
+                break;
+            case 1:
+                chi = 'Dau';
+                break;
+            case 2:
+                chi = 'Tuat';
+                break;
+            case 3:
+                chi = 'Hoi';
+                break;
+            case 4:
+                chi = 'Tý';
+                break;
+            case 5:
+                chi = 'Suu';
+                break;
+            case 6:
+                chi = 'Dan';
+                break;
+            case 7:
+                chi = 'Mao';
+                break;
+            case 8:
+                chi = 'Thin';
+                break;
+            case 9:
+                chi = 'Tỵ';
+                break;
+            case 10:
+                chi = 'Ngo';
+                break;
+            case 11:
+                chi = 'Mui';
+
+        }
+        document.getElementById('xuathien').innerText = can + '' + chi;
+    }
+</script>
+</body>
+</html>

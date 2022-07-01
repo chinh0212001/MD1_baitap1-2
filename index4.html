@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <img id="my" style="width: 100px;height: 100px" src="https://vnn-imgs-f.vgcloud.vn/2019/03/19/18/o-to-moi-4.jpg">
+    <p>an de di chuyen</p>
+    <input type="button" value="Click phai!" onclick="diChuyenSangPhai()">
+    <input type="button" value="Click trai!" onclick="diChuyenSangTrai()">
+    <input type="button" value="Clich len !" onclick="diChuyenLen()">
+    <input type="button" value="Clich xuong !" onclick="diChuyenXuong()">
+</form>
+<script>
+    let khanh = null;
+    khanh = document.getElementById('my');
+
+    function  init(){
+        khanh = document.getElementById('my');
+        khanh.style.position = 'relative'
+        khanh.style.left = '500px';
+        khanh.style.top = '250px';
+    }
+    function diChuyenSangPhai(){
+        khanh.style.left = parseInt(khanh.style.left) + 10 + 'px';
+    }
+    function diChuyenSangTrai(){
+        khanh.style.left = parseInt( khanh.style.left) - 10 + 'px';
+
+    }
+    function diChuyenLen(){
+        khanh.style.top = parseInt(khanh.style.top) - 10 + 'px';
+    }
+    function diChuyenXuong(){
+        khanh.style.top = parseInt(khanh.style.top) + 10 + 'px';
+    }
+    window.onload = init()
+</script>
+</body>
+</html>
